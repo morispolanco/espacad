@@ -71,9 +71,3 @@ You are a renowned academic specializing in the Spanish language, with over two 
 
             except Exception as e:
                 st.error(f"Ocurrió un error: {e}")
-
-# Mensaje adicional
-st.markdown("""
----
-*Este chatbot utiliza la API de OpenRouter para procesar las consultas. Asegúrate de que tu clave de API esté configurada correctamente en los secretos de Streamlit.*
-""")
