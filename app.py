@@ -6,7 +6,7 @@ import json
 st.set_page_config(
     page_title="Chatbot Académico de Español",
     page_icon="🗨️",
-    layout="wide",
+
 )
 
 # Título de la aplicación
