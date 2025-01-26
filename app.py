@@ -13,7 +13,7 @@ st.title("🗨️ Chatbot Académico de Español")
 
 # Instrucciones para el usuario
 st.markdown("""
-Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `deepseek-ai/DeepSeek-R1` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y más.
+Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `klusterai/Meta-Llama-3.3-70B-Instruct-Turbo` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y más.
 """)
 
 # Entrada del usuario
@@ -53,7 +53,7 @@ if st.button("Enviar"):
 
                 # Construir el payload
                 payload = {
-                    "model": "deepseek-ai/DeepSeek-R1",  # Usar el modelo de DeepSeek-R1 de Kluster.ai
+                    "model": "klusterai/Meta-Llama-3.3-70B-Instruct-Turbo",  # Usar el modelo Meta-Llama-3.3-70B-Instruct-Turbo
                     "max_completion_tokens": 5000,
                     "temperature": 1,
                     "top_p": 1,
