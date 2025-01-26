@@ -17,25 +17,6 @@ st.markdown("""
 Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `gpt-4o-mini` a través de la API de OpenRouter para responder tus preguntas sobre gramática, sintaxis, literatura y más.
 """)
 
-# Parámetros configurables
-st.sidebar.header("Configuración del Chatbot")
-temperature = st.sidebar.slider(
-    "Temperatura",
-    min_value=0.0,
-    max_value=1.0,
-    value=0.7,
-    step=0.1,
-    help="Controla la creatividad de las respuestas. Valores más altos generan respuestas más creativas."
-)
-max_tokens = st.sidebar.number_input(
-    "Máximo de tokens",
-    min_value=100,
-    max_value=2000,
-    value=1000,
-    step=100,
-    help="Define la longitud máxima de la respuesta del chatbot."
-)
-
 # Entrada del usuario
 user_query = st.text_area("Escribe tu consulta sobre el idioma español:", height=150)
 
@@ -74,6 +55,10 @@ if st.button("Enviar"):
                     **Público Objetivo:**
                     El público objetivo son estudiantes de español de nivel intermedio a avanzado, profesores de español, y cualquier persona interesada en mejorar su comprensión y uso del idioma. El nivel de detalle debe ser suficiente para satisfacer a usuarios con un conocimiento previo del tema, pero también accesible para aquellos que están comenzando a explorar aspectos más avanzados del español.
                 """)
+
+                # Parámetros fijos
+                temperature = 0.7
+                max_tokens = 1000
 
                 # Crear el payload para la solicitud
                 payload = {
