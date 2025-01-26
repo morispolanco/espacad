@@ -13,7 +13,7 @@ st.title("🗨️ Chatbot Académico de Español")
 
 # Instrucciones para el usuario
 st.markdown("""
-Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `DeepSeek-R1` de DeepSeek AI para responder tus preguntas sobre gramática, sintaxis, literatura y más.
+Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `deepseek-ai/DeepSeek-R1` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y más.
 """)
 
 # Entrada del usuario
@@ -27,7 +27,7 @@ if st.button("Enviar"):
         with st.spinner("Procesando tu consulta..."):
             try:
                 # Recuperar la clave de API desde los secretos
-                api_key = st.secrets["deepseekai"]["api_key"]  # Asegúrate de tener la clave API en secrets
+                api_key = st.secrets["klusterai"]["api_key"]  # Asegúrate de tener la clave API en secrets
 
                 # Crear el prompt y el payload para la solicitud
                 system_prompt = """
@@ -53,7 +53,7 @@ if st.button("Enviar"):
 
                 # Construir el payload
                 payload = {
-                    "model": "deepseek-ai/DeepSeek-R1",  # Usar DeepSeek-R1
+                    "model": "deepseek-ai/DeepSeek-R1",  # Usar el modelo de DeepSeek-R1 de Kluster.ai
                     "max_completion_tokens": 5000,
                     "temperature": 1,
                     "top_p": 1,
@@ -69,9 +69,9 @@ if st.button("Enviar"):
                     "Content-Type": "application/json"
                 }
 
-                # Realizar la solicitud a la API de DeepSeek AI
+                # Realizar la solicitud a la API de Kluster.ai
                 response = requests.post(
-                    "https://api.deepseek.ai/v1/chat/completions",
+                    "https://api.kluster.ai/v1/chat/completions",  # URL de la API de Kluster.ai
                     headers=headers,
                     json=payload
                 )
