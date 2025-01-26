@@ -11,9 +11,23 @@ st.set_page_config(
 # Título de la aplicación
 st.title("🗨️ Chatbot Académico de Español")
 
+# Barra lateral
+st.sidebar.header("Acerca de esta aplicación")
+st.sidebar.markdown("""
+Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `klusterai/Meta-Llama-3.3-70B-Instruct-Turbo` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y otros aspectos relacionados con el idioma español.
+
+**¿Cómo funciona?**  
+Escribe tu consulta en el campo de texto y el chatbot te proporcionará una respuesta basada en un profundo conocimiento de la lengua española. El modelo está diseñado para ayudarte a resolver dudas de gramática, uso correcto del lenguaje, variaciones dialectales y mucho más.
+
+### Autor:
+**Moris Polanco**  
+Miembro de la **Academia Guatemalteca de la Lengua**
+""")
+
 # Instrucciones para el usuario
 st.markdown("""
-Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `klusterai/Meta-Llama-3.3-70B-Instruct-Turbo` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y más.
+**Instrucciones:**  
+Escribe tu consulta sobre el idioma español en el cuadro de texto a continuación y presiona el botón **"Enviar"** para recibir una respuesta detallada.
 """)
 
 # Entrada del usuario
