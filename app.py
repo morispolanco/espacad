@@ -4,17 +4,17 @@ import json
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Chatbot Académico de Español",
+    page_title="Dudas y dificultades del español",
     page_icon="🗨️",
 )
 
 # Título de la aplicación
-st.title("🗨️ Chatbot Académico de Español")
+st.title("🗨️ Dudas y dificultades del español")
 
 # Barra lateral
 st.sidebar.header("Acerca de esta aplicación")
 st.sidebar.markdown("""
-Bienvenido al **Chatbot Académico de Español**. Este asistente utiliza el modelo `klusterai/Meta-Llama-3.3-70B-Instruct-Turbo` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y otros aspectos relacionados con el idioma español.
+Bienvenido al **Bienvenido a chatbot de Dudas y dificultades del español**. Este asistente utiliza el modelo `klusterai/Meta-Llama-3.3-70B-Instruct-Turbo` de Kluster.ai para responder tus preguntas sobre gramática, sintaxis, literatura y otros aspectos relacionados con el idioma español.
 
 **¿Cómo funciona?**  
 Escribe tu consulta en el campo de texto y el chatbot te proporcionará una respuesta basada en un profundo conocimiento de la lengua española. El modelo está diseñado para ayudarte a resolver dudas de gramática, uso correcto del lenguaje, variaciones dialectales y mucho más.
@@ -38,7 +38,7 @@ if st.button("Enviar"):
     if not user_query.strip():
         st.warning("Por favor, introduce una consulta para continuar.")
     else:
-        with st.spinner("Procesando tu consulta..."):
+        with st.spinner("Procesando tu consulta"):
             try:
                 # Recuperar la clave de API desde los secretos
                 api_key = st.secrets["klusterai"]["api_key"]  # Asegúrate de tener la clave API en secrets
