@@ -9,7 +9,7 @@ st.set_page_config(
 )
 
 # Título de la aplicación
-st.title("🗨️ Dudas y dificultades del español")
+st.title("Dudas y dificultades del español")
 
 # Barra lateral
 st.sidebar.header("Acerca de esta aplicación")
