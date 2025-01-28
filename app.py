@@ -31,7 +31,7 @@ Escribe tu consulta sobre el idioma español en el cuadro de texto a continuaci�
 """)
 
 # Entrada del usuario
-user_query = st.text_area("Escribe tu consulta sobre el idioma español:", height=110)
+user_query = st.text_area("Escribe tu consulta sobre el idioma español:", height=80)
 
 # Botón para enviar la consulta
 if st.button("Enviar"):
